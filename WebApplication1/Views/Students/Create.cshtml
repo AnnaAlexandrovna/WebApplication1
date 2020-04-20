@@ -1,0 +1,31 @@
+﻿@model WebApplication1.Models.GroupModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <p>
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name)
+            @Html.ValidationMessageFor(m => m.Name)
+        </p>
+
+        <p>
+            @Html.LabelFor(m => m.NumOfStudents)
+            @Html.TextBoxFor(m => m.NumOfStudents, null, htmlAttributes: new { @type = "number" })
+            @Html.ValidationMessageFor(m => m.NumOfStudents)
+        </p>
+
+        <input type="submit" value="Create" />
+    }
+</body>
+</html>
