@@ -1,21 +1,21 @@
 ﻿@model List<WebApplication1.Models.GroupModel>
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    
-</head>
-<body>
-    @foreach(var group in Model)
-    {
-    <p>Id = @group.Id, Name = @group.Name, NumOfStudents = @group.NumOfStudents</p>
+    @{
+    Layout = "_DefaultLayout";
     }
-    @Html.ActionLink("Create Group", "Create")
-</body>
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+
+    </head>
+    <body>
+        @foreach(var group in Model)
+    {
+        <p>Id = @group.Id, Name = @group.Name, NumOfStudents = @group.NumOfStudents</p>
+    }
+        @Html.ActionLink("Create Group", "Create")
+    </body>
 </html>

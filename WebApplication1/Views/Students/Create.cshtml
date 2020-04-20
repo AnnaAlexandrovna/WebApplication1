@@ -1,16 +1,9 @@
 ﻿@model WebApplication1.Models.GroupModel
 @{
-    Layout = null;
+    Layout = "_DefaultLayout";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
     @using (Html.BeginForm())
     {
         <p>
@@ -27,5 +20,3 @@
 
         <input type="submit" value="Create" />
     }
-</body>
-</html>
